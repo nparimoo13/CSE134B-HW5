@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta name="keywords" content="HTML">
+  <meta name="author" content="Neal Parimoo">
+  <link rel="stylesheet" href="./Style.css" TYPE="text/css" >
+</head>
+
+
+<body>
+  
+
+    <header>
+        <h1>Neal's Portfolio</h1>
+        <h2>Date Created: 1/27/2023</h2>
+        <p><b>Hello!</b> Welcome to my website, I am <em>glad</em> to have you here.
+        </p>
+        <p>This website will highlight my goals, accomplishments, and experiences as a <strong>software developer</strong></p>
+        <br><br>
+        <h2>My Favorite Library</h2>
+        <figure>
+        <picture>
+          <img src="Geisel.jpg" alt="Geisel" width="500" height="300">
+          <figcaption>Geisel during the day</figcaption>
+          <img src="Geisel2.jpg" alt="">
+          <figcaption>Geisel during the evening</figcaption>
+        </picture>
+      </figure>
+      <title>I love computer Science!</title>
+
+        <h3>Programming Languages I Know</h3>
+        <ul>
+            <li><i>Java</i></li>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+        </ul>
+        <details>
+            <summary>My Favorite Programming Language</summary>
+            <p>C++</p>
+          </details>
+        <br><br>
+        <hr>
+        <h2>Favorite Text Editors</h2>
+        <ol>
+            <li>Visual Studio Code</li>
+            <li>Eclipse</li>
+            <li>Microsoft Visual Studio</li>
+            <li>notepad</li>
+            <li>atom</li>
+        </ol>
+        <br>
+        <hr>
+        <br>
+        <h3>My Favorite print statement</h3>
+        <p>It's in Java and it's <code>System.out.println</code></p>
+        <br>
+        <hr>
+        <h2>Where I am from</h2>
+        <picture>
+          <img src="California.png" alt="Geisel" width="500" height="300">
+          <figcaption>The Golden State</figcaption>
+        </picture>
+        
+  
+  
+        <canvas id="thisCanvas" width="200" height="100"></canvas>
+        <script>
+          var c = document.getElementById("thisCanvas");
+          var ctx = c.getContext("2d");
+          ctx.fillStyle = "#00FF00";
+        </script>
+        
+        <hr>
+        <br>
+        <h1>Pick your favorite Ice Cream Flavor</h1>
+        <form action="/action_page.php" method="get">
+          <label for="ice cream">Choose your browser from the list:</label>
+          <input list="ice cream" name="ice cream" id="ice cream">
+          <datalist id="ice cream">
+            <optgroup label="The Better Flavors">
+            <option value="Chocolate">
+            <option value="Strawberry">
+            </optgroup>
+            <optgroup label="The Not as good flavors">
+            <option value="Vanilla">
+            <option value="Oreo">
+            <option value="Caramel">
+            </optgroup>
+          </datalist>
+          <input type="submit">
+        </form>
+        <br>
+        <hr>
+
+        <h2>A Ted Talk I like to listen to about Computer Science</h2>
+        <audio controls>
+          <source src="CompSci.mp3" type="audio/mp3">
+        </audio>
+        <br>
+        <hr>
+        <br>
+        <h2>A video I enjoy</h2>
+        <video width="320" height="240" controls>
+          <source src="myVideo.mp4" type="video/mp4">
+        </video>
+        <br>
+        <hr>
+        <div class="myDiv">
+            <h2>I would like to one day own my own company</h2>
+            <aside>
+            <h3><pre>Until then I'll 
+               set my sights on 
+                                FAANG</pre></h3>
+          </div>       
+          <br><br>
+<hr>
+<br>
+    <table>
+        <colgroup>
+          <col span="2" style="background-color: white">
+          <col style="background-color:lightblue">
+        </colgroup>
+        <caption>My Past</caption>
+        <tr>
+            <th>Experience</th>
+            <th>Main Skill</th>
+            <th>Time</th>
+          </tr>
+          <tr>
+            <td>First American Software Intern</td>
+            <td>AWS Technologies</td>
+            <td>4 months</td>
+          </tr>
+
+        </table>
+</aside>
+        <section>
+            <h2>Goals:</h2>
+            <form action="/action_page.php" method="get">
+                <input type="checkbox" name="goal1" value="AWS">
+                <label for="goal1"> Get an AWS certification</label><br>
+                <input type="checkbox" name="goal2" value="110">
+                <label for="goal2"> Successfully complete CSE 110</label><br>
+                <input type="checkbox" name="goal3" value="internship1" checked>
+                <label for="goal3"> Get my first internship</label><br>
+                <input type="checkbox" name="goal4" value="internship2" checked>
+                <label for="goal4"> Get my second internship</label><br><br>
+                <input type="submit" value="Submit">
+              </form>
+        </section>
+ <br><br><br>
+ <hr>
+ <br>
+ <textarea id="w3review" name="w3review" rows="4" cols="50">
+ Please leave constructive input
+  </textarea>
+ <br>
+ <h2>I love circles</h2>
+ <svg width="100" height="100">
+  <circle cx="50" cy="50" r="20"
+  stroke="red" stroke-width="4" fill="yellow" />
+Sorry, your browser does not support inline SVG.
+</svg>
+<a href="https://www.google.com/">Google</a>
+
+    </header>
+</body>
+
+<hr>
+<footer>
+    <nav>
+        <h2>My Github Portfolio</h2>
+        <a href="https://github.com/nparimoo13">Neal's Repository</a>
+      </nav>
+      <br><br><br><br>
+
+    <form action="/action_page.php">
+        <fieldset>
+          <legend>If you are interested in hiring me:</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="company">Affiliated Company:</label>
+          <input type="text" id="company" name="company"><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+      
+      
+</footer>
+
+
+</html>
