@@ -1,0 +1,65 @@
+:root{
+    --heading-color: rgb(52, 32, 205);
+    --background-color: #FFFDD0;
+}
+h1{
+    color: var(--heading-color);
+    font-weight: Bolder;
+    text-align: center;
+}
+body{
+    background-color: var(--background-color);
+}
+@font-face {
+    font-family: 'K2D';
+    src: local('K2D Regular'), url(./K2D-Regular.ttf);
+}
+h2{
+    font-family: K2D, Serif, Verdana;
+    text-align: center;
+    border-style: ridge;
+    border-width: 5px;
+}
+@keyframes myAnimation {
+    from {background-color: lightblue;}
+    to {background-color: blueviolet;}
+  }
+li{
+    background-color: lightblue;
+    animation-name: example;
+    animation-duration: 7s;
+}
+p { /*selects element with id delay*/
+    font-size: 1.5rem;
+    transition-property: font-size;
+    transition-duration: 5;
+    transition-delay: 3s;
+  }
+  
+  p:hover {
+    font-size: 2.5rem;
+    background-color: white;
+  }
+  li:hover{
+    background-color: white;
+  }
+  iframe{
+    transform: scale(0.8);
+  }
+  @media screen and (max-height: 900px) and (max-width: 1380px) and (min-width: 600px) and (min-height: 450px) {
+    :root{
+        font-size: 21px;
+    }
+}
+@media screen and (max-height: 750px) and (max-width: 300px) and (min-width: 400px) and (min-height: 250px) {
+    :root{
+        font-size: 17x;
+    }
+}
+figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+  
