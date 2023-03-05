@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta name="keywords" content="HTML">
+        <meta name="author" content="Neal Parimoo">
+        <title>HTML Elements Reference</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1><b>Simple Dialogs?</b></h1>
+        <button id='alert'>Alert</button>
+        <button id='confirm'>Confirm</button>
+        <button id='prompt'>Prompt</button>
+        <button id='safePrompt'>Safer Prompt</button>
+        <hr>
+        <output id='output'></output>
+        
+
+    </body>
+    <script>
+        //import {sayHi} from './customdialog.js';
+        let alertBtn = document.getElementById('alert');
+        alertBtn.addEventListener('click', function (event) {
+
+            alert("Alert Pressed!");
+        });
+        let confirmBtn = document.getElementById('confirm');
+        var output = document.getElementById('output');
+        confirmBtn.addEventListener('click', (event) => {
+            var output2 = confirm("Do you confirm this?");
+            if(output2)
+            {
+                output.textContent = `Confirm Result: ${output2}`;
+            }
+            else
+            {
+                output.textContent = `Confirm Result: ${output2}`;
+            }
+        });
+        let promptBtn = document.getElementById('prompt');
+        promptBtn.addEventListener('click', function (event) {
+            var output3 = prompt("What is your name?");
+            if(output3 == null)
+            {
+                output.textContent = "Prompt result: User didn't type anything";
+            }
+            output.textContent = `Prompt result: ${output3}`;
+        })
+        let safePromptBtn = document.getElementById('safePrompt');
+        safePrompt.addEventListener('click', function (event) {
+            var output3 = prompt("What is your name?");
+            if(output3 == null)
+            {
+                output.textContent = "Prompt result: User didn't type anything";
+            }
+            output.textContent = `Prompt result: ${output3}`;
+        })
+    </script>
+</html>

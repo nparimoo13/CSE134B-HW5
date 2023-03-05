@@ -1,0 +1,8 @@
+- Added new html and JS files to different webpages of my website
+- These web pages highlight my new expertise in JavaScript
+- Added nativedialogs.html
+- This html file highlighted my knowledge of using alert, prompt, confirm, and a saferPrompt
+- added customdialog.html and customdoalog.html
+- These files show my use of modules and dialog forms as popups
+- Added a crud.html file, which does blog posts
+- this file highlights everything I've done in JavaScript so far, and most importantly incorporates local storage and my knowledge of how to use it

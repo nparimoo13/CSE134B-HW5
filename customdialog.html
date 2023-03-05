@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta name="keywords" content="HTML">
+        <meta name="author" content="Neal Parimoo">
+        <title>The custom dialog</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <button id='alert2'>Alert</button>
+        <button id='confirm2'>Confirm</button>
+        <button id='prompt2'>Prompt</button>
+        <hr>
+        <output id="output2"></output>
+    </body>
+    <script type = "module">
+        import {myAlert} from './customdialog.js';
+        let alertBtn2 = document.getElementById('alert2');
+        alertBtn2.addEventListener('click', function (event) {
+            myAlert();
+        });
+        import {myConfirm, yesFunction, noFunction} from './customdialog.js';
+        window.yesFunction = yesFunction;
+        window.noFunction = noFunction;
+        let confirmBtn2 = document.getElementById('confirm2');
+        confirmBtn2.addEventListener('click', function (event) {
+            myConfirm();
+        });
+        import {myPrompt, submitFunction} from './customdialog.js';
+        window.submitFunction = submitFunction;
+        let promptBtn2 = document.getElementById('prompt2');
+        promptBtn2.addEventListener('click', function (event) {
+            myPrompt();
+        })
+    </script>
+    </html>
