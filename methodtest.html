@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>New Post</title>
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Neal Parimoo">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <form id="fake-record">
+        <label for="fake-record-id">ID: </label>
+        <input type="number" id="fake-record-id" name="fake-record-id"><br>
+        <label for="article-name">Article Name:</label>
+        <input type="text" id="article-name" name="article-name"> <br>
+        <label for="article-body">Article Body:</label>
+        <textarea id="article-body"></textarea>
+        <!-- include the date right now with a call to new Date() -->
+    
+    </form>
+
+    <button id="post-button">Post Button</button>
+    <button id="get-button">Get Button</button>
+    <button id="put-button">Put Button</button>
+    <button id="delete-button">Delete Button</button>
+
+    <output id="response"></output>
+    
+    <style>
+        output
+        {
+            white-space: pre;
+            background-color: #FFFDD0;
+
+        }
+    </style>
+
+    <script type="module">
+        import {ErrorMessage, setOutput} from './styleMethod.js';
+        const postBtn = document.getElementById('post-button');
+        const getBtn = document.getElementById('get-button');
+        const putBtn = document.getElementById('put-button');
+        const deleteBtn = document.getElementById('delete-button');
+
+        let fakeRecordIDval = document.getElementById("fake-record-id");
+        let articleName = document.getElementById("article-name");
+        let articleBody = document.getElementById("article-body");
+
+        let output = document.getElementById('response');
+    
+
+        postBtn.addEventListener('click', () => {
+        
+            let postContent = {
+            fakeRecordID: fakeRecordIDval.value,
+            articleName: articleName.value,
+            articleBody: articleBody.value,
+            date: new Date()
+        }
+
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if(this.readyState === XMLHttpRequest.DONE)
+                {
+                    if(this.status === 200)
+                    {
+                        setOutput(this.responseText, output);
+                    }
+                    else
+                    {
+                        ErrorMessage(this.statusText);
+                    }
+                }
+            }
+            xhr.open('POST', 'https://httpbin.org/post'); //async is default set to true
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(postContent));
+            //post button should read data and send it to https://httpbin.org/post
+        });
+        getBtn.addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if(this.readyState === XMLHttpRequest.DONE)
+                {
+                    if(this.status === 200)
+                    {
+                        setOutput(this.responseText, output);
+                        //textArea??
+
+                    }
+                    else
+                    {
+                        ErrorMessage(this.statusText);
+                    }
+                }
+            }
+            xhr.open('GET', `https://httpbin.org/get?id=${fakeRecordIDval.value}`);
+            xhr.send();
+        });
+        putBtn.addEventListener('click', () => {
+            
+            let postContent = {
+            fakeRecordID: fakeRecordIDval.value,
+            articleName: articleName.value,
+            articleBody: articleBody.value,
+            date: new Date()
+        }
+
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if(this.readyState === XMLHttpRequest.DONE)
+                {
+                    if(this.status === 200)
+                    {
+                        setOutput(this.responseText, output);
+                    }
+                    else
+                    {
+                        ErrorMessage(this.statusText);
+                    }
+                }
+            }
+            xhr.open('PUT', 'https://httpbin.org/put'); //async is default set to true
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(postContent));
+        });
+        deleteBtn.addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if(this.readyState === XMLHttpRequest.DONE)
+                {
+                    if(this.status === 200)
+                    {
+                        setOutput(this.responseText, output);
+                    }
+                    else
+                    {
+                        ErrorMessage(this.statusText);
+                    }
+                }
+            }
+            xhr.open('DELETE', `https://httpbin.org/delete?id=${fakeRecordIDval.value}`);
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
